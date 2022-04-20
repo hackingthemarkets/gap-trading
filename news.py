@@ -1,12 +1,4 @@
 import websocket, json, config
-# from alpaca_trade_api.stream import Stream
-# from alpaca_trade_api.rest import REST, TimeFrame, TimeFrameUnit
-
-# api = REST(key_id=config.API_KEY, secret_key=config.SECRET_KEY, base_url=config.BASE_URL)
-
-# news = api.get_news('NFLX')
-
-# print(news)
 
 def on_message(ws, message):
     print(message)
@@ -42,10 +34,3 @@ if __name__ == "__main__":
 
     ws.run_forever()
 
-
-# start: Optional[str] = None,
-# end: Optional[str] = None,
-# limit: int = 10,
-# sort: Sort = Sort.Desc,
-# include_content: bool = False,
-# exclude_contentless: bool = False,
