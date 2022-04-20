@@ -18,6 +18,7 @@ for symbol in market_order_symbols:
     open_price = downgaps[downgaps.symbol == symbol]['open'].iloc[-1]
     quantity = config.ORDER_DOLLAR_SIZE // open_price
     order = api.submit_order(symbol, quantity, 'sell', 'market')
+    print("{} buying {} {} at {}".format(datetime.datetime.now().isoformat(), quantity, symbol, open_price))
 
 quotes = api.get_latest_quotes(bracket_order_symbols)
 
@@ -35,3 +36,5 @@ for symbol in bracket_order_symbols:
                                     'stop_price': stop_price, 
                                     'limit_price': stop_limit_price
                                 })
+
+    print("{} buying {} {} at {}".format(datetime.datetime.now().isoformat(), quantity, symbol, quotes[symbol].bp))

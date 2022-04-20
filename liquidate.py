@@ -1,4 +1,4 @@
-import config
+import config, datetime
 from alpaca_trade_api.rest import REST
 
 api = REST(key_id=config.API_KEY, secret_key=config.SECRET_KEY, base_url=config.BASE_URL)
