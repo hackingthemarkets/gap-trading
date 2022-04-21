@@ -37,4 +37,4 @@ for symbol in bracket_order_symbols:
                                     'limit_price': stop_limit_price
                                 })
 
-    print("{} buying {} {} at {}".format(datetime.datetime.now().isoformat(), quantity, symbol, quotes[symbol].bp))
+    print("{} shorting {} {} at {}".format(datetime.datetime.now().isoformat(), quantity, symbol, quotes[symbol].bp))
