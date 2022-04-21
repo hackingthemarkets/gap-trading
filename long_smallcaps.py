@@ -17,7 +17,7 @@ trailing_stop_order_symbols = downgaps[downgaps['percent'] < 0.985]['symbol'].to
 for symbol in market_order_symbols:
     open_price = downgaps[downgaps.symbol == symbol]['open'].iloc[-1]
     quantity = config.ORDER_DOLLAR_SIZE // open_price
-    order = api.submit_order(symbol, quantity, 'buy', 'limit', limit_price=open_price)
+    order = api.submit_order(symbol, quantity, 'buy', 'limit', limit_price=round(open_price, 2))
     print("{} buying {} {} at {}".format(datetime.datetime.now().isoformat(), quantity, symbol, open_price))
 
 quotes = api.get_latest_quotes(trailing_stop_order_symbols)
