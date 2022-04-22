@@ -42,7 +42,8 @@ IWM_SYMBOLS = [
     'DMS','LVLU','LABP','ISO','PDLI','GTXI','KLDO'
 ]
 
-today = datetime.date.today()
-yesterday = today - datetime.timedelta(days=1)
+MOVING_AVERAGE_DAYS = 3
+TODAY = datetime.date.today()
+START_DATE = TODAY - datetime.timedelta(days=MOVING_AVERAGE_DAYS)
 
 ORDER_DOLLAR_SIZE = 5000
