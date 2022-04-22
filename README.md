@@ -18,7 +18,7 @@ pip3 install -r requirements.txt
 ```
 crontab -e
 
-31 6 * * * python3 /root/gap-trading/long_smallcaps.py >> /root/trade.log 2>&1
-31 6 * * * python3 /root/gap-trading/short_bigtech.py >> /root/trade.log 2>&1
-55 12 * * * python3 /root/gap-trading/liquidate.py >> /root/trade.log 2>&1
+40 6 * * 1-5 python3 /root/gap-trading/long_smallcaps.py >> /root/trade.log 2>&1
+40 6 * * 1-5 python3 /root/gap-trading/short_bigtech.py >> /root/trade.log 2>&1
+55 12 * * 1-5 python3 /root/gap-trading/liquidate.py >> /root/trade.log 2>&1
 ```
