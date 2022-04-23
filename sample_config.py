@@ -42,7 +42,7 @@ IWM_SYMBOLS = [
     'DMS','LVLU','LABP','ISO','PDLI','GTXI','KLDO'
 ]
 
-MOVING_AVERAGE_DAYS = 3
+MOVING_AVERAGE_DAYS = 20
 TODAY = datetime.date.today()
 START_DATE = TODAY - datetime.timedelta(days=MOVING_AVERAGE_DAYS)
 

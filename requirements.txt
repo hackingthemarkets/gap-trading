@@ -1,2 +1,2 @@
 alpaca_trade_api
-schedule
+pandas
